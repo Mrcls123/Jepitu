@@ -46,3 +46,20 @@ $(document).ready(function () {
         }
     })
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var umkmContainer = document.querySelector('#umkm .support');
+    var umkmItems = umkmContainer.querySelectorAll('div');
+
+    function adjustUMKMGrid() {
+        if (umkmItems.length > 4) {
+            umkmContainer.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        } else {
+            umkmContainer.style.gridTemplateColumns = 'repeat(' + umkmItems.length + ', 1fr)';
+        }
+    }
+
+    adjustUMKMGrid();
+
+    window.addEventListener('resize', adjustUMKMGrid);
+});

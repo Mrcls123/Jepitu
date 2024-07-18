@@ -206,12 +206,21 @@ section.abuabu {
     background-color: #f5f6f6;
 }
 
-.support,
 .tim,
 .blog {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
+    display: flex;
+}
+
+.support
+{
+    flex-direction: row;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
 }
 
 .support h6,
@@ -258,7 +267,7 @@ section div#gallery div img:hover {
 }
 
 section.quote {
-    background: url('asset/background-bromo.jpg') no-repeat;
+    background: url('asset/pasar.jpg') no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -396,6 +405,7 @@ footer iframe {
     .gallery {
         flex-direction: column; /* Stack images vertically */
         align-items: center;
+        text-align: center;
     }
 
     .gallery img {
