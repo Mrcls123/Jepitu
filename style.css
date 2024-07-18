@@ -435,4 +435,16 @@ footer iframe {
         width: 300px;
         height: 100px;
     }
+    
+    #umkm .support {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .support div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
